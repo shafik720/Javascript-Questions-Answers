@@ -10,4 +10,5 @@ let x = dummy.split('e');
 
 let dummyForSlice = 'where have all the flowers gone';
 x = dummyForSlice.slice(5,12);
-console.log(x);
+// console.log(x);
+
