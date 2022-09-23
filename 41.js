@@ -5,4 +5,9 @@
 
 let dummy = 'Where have all the flowers gone !';
 let x = dummy.split('e');
+// console.log(x);
+
+
+let dummyForSlice = 'where have all the flowers gone';
+x = dummyForSlice.slice(5,12);
 console.log(x);
