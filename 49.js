@@ -10,3 +10,11 @@ let cars = [
     {product: "Headphone", price: 430, quantity: 2, tag: "Favourite"},
     {product: "Shoe", price: 970, quantity: 3, tag: "Essential"}
 ]
+
+let x = cars.map(element=>element);
+
+console.log(x)
+
+// let y = cars.forEach(element=>{
+//     console.log(element);
+// })
