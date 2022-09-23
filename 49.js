@@ -11,7 +11,7 @@ let cars = [
     {product: "Shoe", price: 970, quantity: 3, tag: "Essential"}
 ]
 
-let x = cars.map(element=>element);
+let x = cars.map(element=>element.product);
 
 console.log(x)
 
