@@ -16,4 +16,5 @@ const arr =(model)=>{
 }
 
 console.log(arr(numbers));
-// console.log(numbers.indexOf(54));
+
+
