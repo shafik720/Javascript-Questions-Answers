@@ -1,4 +1,6 @@
 
+let ul = document.getElementById('ul');
+
 document.getElementById('add').addEventListener('click',function(){
     let input = document.getElementById('inputText');
     if(!input.value){
@@ -10,7 +12,6 @@ document.getElementById('add').addEventListener('click',function(){
 })
 
 let showHtml = (model) => {
-    let ul = document.getElementById('ul');
     let li = document.createElement('li');
     li.innerText = model;
     ul.appendChild(li);
@@ -47,3 +48,8 @@ let addToCart = (model) => {
 }
 
 showFromStorage();
+
+document.getElementById('delete').addEventListener('click', function(){
+    localStorage.clear('cart');
+    ul.style.display = 'none';
+})
