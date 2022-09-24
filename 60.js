@@ -4,5 +4,14 @@ document.getElementById('add').addEventListener('click',function(){
 })
 
 let getCart = () => {
-    let 
+    let existedCart = localStorage.getItem('cart');
+    let parsedCart
+    if(existedCart){
+        parsedCart = JSON.parse(existedCart);
+    }else{
+        parsedCart = {};
+    }
+    return parsedCart;
 }
+
+getCart();
