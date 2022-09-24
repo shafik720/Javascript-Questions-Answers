@@ -1,7 +1,28 @@
 
 document.getElementById('add').addEventListener('click',function(){
-    console.log('Clicked');
+    let input = document.getElementById('inputText');
+    if(!input.value){
+        return;
+    }
+    showHtml(input.value);
+    addToCart(input.value);
+    input.value = '';
 })
+
+let showHtml = (model) => {
+    let ul = document.getElementById('ul');
+    let li = document.createElement('li');
+    li.innerText = model;
+    ul.appendChild(li);
+}
+
+let showFromStorage = () => {
+    let getCartItem = getCart();
+    for(let element in getCartItem){
+        showHtml(element);
+    }
+    console.log(getCartItem);
+}
 
 let getCart = () => {
     let existedCart = localStorage.getItem('cart');
@@ -14,4 +35,15 @@ let getCart = () => {
     return parsedCart;
 }
 
-getCart();
+let addToCart = (model) => {
+    let dummy = getCart();
+    if(dummy[model]){
+        dummy[model] = dummy[model] + 1 ; 
+    }else{
+        dummy[model] = 1;
+    }
+    let dummyFied = JSON.stringify(dummy);
+    localStorage.setItem('cart', dummyFied);
+}
+
+showFromStorage();
