@@ -1,11 +1,16 @@
 let product = document.getElementById('product');
 let price = document.getElementById('price');
+let table = document.getElementById('table');
 
 const operation = () => {
     if(!product.value){
         return ;
     }
     addLocalStorage(product.value, price.value);
+}
+
+const showHtml = () => {
+    
 }
 
 let getCart = () => {
