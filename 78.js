@@ -50,3 +50,7 @@ const showHtmlLocal = () => {
 }
 showHtmlLocal();
 
+const order = () => {
+    table.style.display = 'none' ; 
+    localStorage.clear('cart');
+}
