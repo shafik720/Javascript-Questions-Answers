@@ -10,3 +10,4 @@ let car = {
 
 let {country} = car;
 console.log(country[3]);
+console.log(car['color']);
