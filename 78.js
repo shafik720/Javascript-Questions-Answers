@@ -2,7 +2,10 @@ let product = document.getElementById('product');
 let price = document.getElementById('price');
 
 const operation = () => {
-        
+    if(!product.value){
+        return ;
+    }
+    addLocalStorage(product.value, price.value);
 }
 
 let getCart = () => {
@@ -16,13 +19,12 @@ let getCart = () => {
     return cartObj;
 }
 
-let addLocalStorage = (model) => {
+let addLocalStorage = (model, price) => {
     let dummy = getCart();
-    let x ; 
-    if(x[model] === dummy){
-        x[model] = x[model] + 1;
+    if(dummy[model]){
+        dummy[model] = price;
     }else{
-        x[model] = 1;
+        dummy[model] = price;
     }
     let dummified = JSON.stringify(dummy);
     localStorage.setItem('cart', dummified);
