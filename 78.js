@@ -33,7 +33,8 @@ let getCart = () => {
 let addLocalStorage = (model, price) => {
     let dummy = getCart();
     if(dummy[model]){
-        dummy[model] = price;
+        model = model + ' ';
+        dummy[model]  = price;
     }else{
         dummy[model] = price;
     }
@@ -48,3 +49,4 @@ const showHtmlLocal = () => {
     }
 }
 showHtmlLocal();
+
